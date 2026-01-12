@@ -40,5 +40,3 @@
     scoreboard players set $OinkiumRomPathIndex_13 Oinkium.Rom -1
     scoreboard players set $OinkiumRomPathIndex_14 Oinkium.Rom -1
     scoreboard players set $OinkiumRomPathIndex_15 Oinkium.Rom -1
-
-    scoreboard players set $OinkiumRomPathValid Oinkium.Rom 0

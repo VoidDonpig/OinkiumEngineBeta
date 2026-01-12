@@ -76,8 +76,6 @@
         scoreboard players operation $OinkiumRomPathIndex_00 Oinkium.Rom = $OinkiumRomCopiedAddress Oinkium.Rom
         scoreboard players operation $OinkiumRomPathIndex_00 Oinkium.Rom %= $4 Oinkium.Constant
         scoreboard players operation $OinkiumRomCopiedAddress Oinkium.Rom /= $4 Oinkium.Constant
-    # パス計算済みフラグを立てる
-        scoreboard players set $OinkiumRomPathValid Oinkium.Rom 1
 
 # リセット
     data remove storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][6]

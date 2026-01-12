@@ -4,9 +4,6 @@
 #
 # @within function oinkium:rom/incremental
 
-# パスが無効ならばフルで計算
-    execute unless score $OinkiumRomPathValid Oinkium.Rom matches 1 run return run function oinkium:rom/shift_data
-
 # 最下位桁が3なら繰り下がり
     execute if score $OinkiumRomPathIndex_15 Oinkium.Rom matches 0 run return run function oinkium:rom/incremental_minus_one_borrow
 
