@@ -19,13 +19,6 @@
 # メインストレージ
     data modify storage oinkium:rom _ set from storage oinkium:rom Initial
 
-# L1・L2・L3キャッシュ初期化
-    scoreboard players set $OinkiumRomL1Cache0 Oinkium.Rom -1
-    scoreboard players set $OinkiumRomL1Cache1 Oinkium.Rom -1
-    scoreboard players set $OinkiumRomL1Cache2 Oinkium.Rom -1
-
-    data modify storage oinkium:rom L1 set value {"0":{},"1":{},"2":{}}
-
 # インクリメンタル更新用
     scoreboard players set $OinkiumRomLastAddress Oinkium.Rom -1
 
