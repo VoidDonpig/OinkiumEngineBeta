@@ -12,11 +12,14 @@
 # 定数設定
     function oinkium:core/load/declare_constant
 
+# Prefix
+    data modify storage oinkium:global Prefix.Error set value "§r§c[Oinkium] ERROR>>§r "
+
 # ROM用初期化処理
     execute unless data storage oinkium:rom _ run function oinkium:rom/init
 
-# Prefix
-    data modify storage oinkium:global Prefix.Error set value ["",{text:"Oinkium>> ERROR ",bold:true,color:"red"}]
+# ビルトインレジストリ登録
+    function oinkium:core/registries/built_in
 
 # ロード済みフラグ
     #data modify storage oinkium:core IsFirstLoaded set value true
