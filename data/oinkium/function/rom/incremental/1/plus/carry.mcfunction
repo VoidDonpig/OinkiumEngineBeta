@@ -2,7 +2,7 @@
 #
 # 1桁繰り上がった時の処理
 #
-# @within function oinkium:rom/incremental/1/plus/
+# @within function oinkium:rom/incremental/1/plus/_
 
 # 繰り上がりが2桁以上なら直接取ってくる
     execute if score $OinkiumRomPathIndex_14 Oinkium.Rom matches 3 run return run function oinkium:rom/shift_data

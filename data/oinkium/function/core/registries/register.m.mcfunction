@@ -16,8 +16,8 @@
     $function $(Path)
 
 # 末尾削除
-    data remove storage oinkium:core BuildInRegistries[-1]
+    data remove storage oinkium:core BuiltInRegistries[-1]
 
 # 要素が無くなるまで再帰
-    execute if data storage oinkium:core BuildInRegistries[0].Path run data modify storage oinkium:core TargetBuildInRegistry set from storage oinkium:core BuildInRegistries[-1]
-    execute if data storage oinkium:core BuildInRegistries[0].Path run function oinkium:core/registries/register.m with storage oinkium:core TargetBuildInRegistry
+    execute if data storage oinkium:core BuiltInRegistries[0].Path run data modify storage oinkium:core TargetBuildInRegistry set from storage oinkium:core BuiltInRegistries[-1]
+    execute if data storage oinkium:core BuiltInRegistries[0].Path run function oinkium:core/registries/register.m with storage oinkium:core TargetBuildInRegistry

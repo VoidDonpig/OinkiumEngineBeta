@@ -1,8 +1,8 @@
-#> oinkium:rom/incremental/1/plus/
+#> oinkium:rom/incremental/1/plus/_
 #
 # アドレス+1された時の処理
 #
-# @within function oinkium:rom/incremental/
+# @within function oinkium:rom/incremental/_
 
 # 最下位桁が3なら繰り上がり
     execute if score $OinkiumRomPathIndex_15 Oinkium.Rom matches 3 run return run function oinkium:rom/incremental/1/plus/carry

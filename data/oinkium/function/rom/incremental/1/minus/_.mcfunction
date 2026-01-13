@@ -1,8 +1,8 @@
-#> oinkium:rom/incremental/1/minus/
+#> oinkium:rom/incremental/1/minus/_
 #
 # アドレス-1された時の処理
 #
-# @within function oinkium:rom/incremental/
+# @within function oinkium:rom/incremental/_
 
 # 最下位桁が3なら繰り下がり
     execute if score $OinkiumRomPathIndex_15 Oinkium.Rom matches 0 run return run function oinkium:rom/incremental/1/minus/borrow
