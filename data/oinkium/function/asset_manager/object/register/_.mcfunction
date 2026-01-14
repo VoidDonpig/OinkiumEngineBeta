@@ -15,9 +15,6 @@
 # Validation
     execute unless data storage oinkium:asset/object ID run tellraw @a[tag=Oinkium.IsAdmin] [{storage:"oinkium:global",nbt:"Prefix.Error"},{text:"ID: "},{storage:"oinkium:asset/object",nbt:"ObjectRegistries[-1].ID"},{text:" は存在しません"}]
 
-# IDを一時保存
-    execute if data storage oinkium:asset/object ID run data modify storage oinkium:context OriginID set from storage oinkium:asset/object ID
-
 # 継承情報処理
     execute if data storage oinkium:asset/object ID if data storage oinkium:asset/object Extends[0] run function oinkium:asset_manager/object/extends/_
     execute if data storage oinkium:asset/object ID run data modify storage oinkium:asset/object ID set from storage oinkium:context ID
@@ -31,7 +28,6 @@
 
 # リセット
     data remove storage oinkium:context ID
-    data remove storage oinkium:context OriginID
     data remove storage oinkium:asset/object ID
     data remove storage oinkium:asset/object IsFinal
     data remove storage oinkium:asset/object IsAbstract
