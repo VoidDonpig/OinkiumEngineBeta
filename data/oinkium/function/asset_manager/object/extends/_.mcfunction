@@ -1,32 +1,31 @@
 #> oinkium:asset_manager/object/extends/_
 #
-# 継承情報を追加
+# Extends処理
 #
-# @within function
-#   oinkium:asset_manager/object/register.m
+# @within function oinkium:asset/object/extends
 
-# 条件検査のために継承情報コピー
-    data modify storage oinkium:asset/object CopiedExtends append from storage oinkium:asset/object Extends
-
-# 初期化
-    data modify storage oinkium:asset/object IsFirstExtendCheckDone append value {_:{_:false}}
+# IDをすべて突っ込んでしまう
+    function oinkium:asset_manager/object/extends/put_id
 
 # IDをStash
-    function oinkium:asset_manager/common/id/stash
+    function oinkium:asset_manager/common/context/id/stash
 
-# 継承可能かどうか確かめてIDを突っ込む
-    function oinkium:asset_manager/object/extends/check
+# Extendsをコピー
+    data modify storage oinkium:asset/object CopiedExtends append from storage oinkium:asset/object Extends
 
-# Extends削除
+# Extendsリセット
     data remove storage oinkium:asset/object Extends
 
-# 末尾削除
-    data remove storage oinkium:asset/object CopiedExtends[-1]
+# 再帰判定用データ設定
+    data modify storage oinkium:asset/object FirstExtendCheckDone append value {_:{_:false}}
+
+# 再帰的に継承処理
+    function oinkium:asset_manager/object/extends/foreach
 
 # リセット
-    data remove storage oinkium:asset/object IsFirstExtendCheckDone[-1]
-    execute unless data storage oinkium:asset/object CopiedExtends[0] run data remove storage oinkium:asset/object CopiedExtends
-    execute unless data storage oinkium:asset/object IsFirstExtendCheckDone[0] run data remove storage oinkium:asset/object IsFirstExtendCheckDone
+    data remove storage oinkium:asset/object Extends
+    data remove storage oinkium:asset/object CopiedExtends[-1]
+    data remove storage oinkium:asset/object FirstExtendCheckDone[-1]
 
 # IDをPop
-    function oinkium:asset_manager/common/id/pop
+    function oinkium:asset_manager/common/context/id/pop

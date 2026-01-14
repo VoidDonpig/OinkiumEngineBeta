@@ -6,8 +6,8 @@
 
 #> Private
 # @private
-#declare score_holder $OinkiumRomNewLow
 #declare score_holder $OinkiumRomOldLow
+#declare score_holder $OinkiumRomCheckBorrow
 
 # 前回アドレスの下位2桁取得
     scoreboard players operation $OinkiumRomOldLow Oinkium.Rom = $OinkiumRomLastAddress Oinkium.Rom

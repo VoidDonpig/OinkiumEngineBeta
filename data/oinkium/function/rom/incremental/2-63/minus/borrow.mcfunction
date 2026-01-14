@@ -4,6 +4,11 @@
 #
 # @within function oinkium:rom/incremental/2-63/minus/_
 
+#> Private
+# @private
+#declare score_holder $OinkiumRomOldLow
+#declare score_holder $OinkiumRomCheckBorrow
+
 # 前回アドレスの下位3桁取得
     scoreboard players operation $OinkiumRomOldLow Oinkium.Rom = $OinkiumRomLastAddress Oinkium.Rom
     scoreboard players operation $OinkiumRomOldLow Oinkium.Rom %= $64 Oinkium.Constant

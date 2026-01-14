@@ -1,39 +1,30 @@
 #> oinkium:asset_manager/object/register/_
 #
-# オブジェクトのレジストリ登録処理
+# Register処理を行う
 #
-# @within function
-#   oinkium:asset/object/registries
-#   oinkium:asset_manager/object/register
+# @within function oinkium:asset_manager/object/register/foreach
 
-# IDをコピー
-    data modify storage oinkium:context ID set from storage oinkium:asset/object ObjectRegistries[-1].ID
+# context取得
+    data modify storage oinkium:asset/context ID set from storage oinkium:asset/object TargetRegistry.ID
 
-# レジストリデータ取得
-    function oinkium:asset_manager/object/register/get_registry_data.m with storage oinkium:context
+# エイリアスをもとにデータを取ってくる
+    function oinkium:asset_manager/object/register/get_registry_data.m with storage oinkium:asset/context
 
 # Validation
-    execute unless data storage oinkium:asset/object ID run tellraw @a[tag=Oinkium.IsAdmin] [{storage:"oinkium:global",nbt:"Prefix.Error"},{text:"ID: "},{storage:"oinkium:asset/object",nbt:"ObjectRegistries[-1].ID"},{text:" は存在しません"}]
+# 失敗したならば処理を中止
+    data modify storage oinkium:asset/object CopiedID set from storage oinkium:asset/object ID
+    execute store success storage oinkium:asset/object IsDifferentID byte 1 run data modify storage oinkium:asset/object CopiedID set from storage oinkium:asset/context ID
+    execute unless data storage oinkium:asset/object {IsDifferentID:false} run return run tellraw @a[tag=Oinkium.IsAdmin] [{storage:"oinkium:global",nbt:"Prefix.Error"},{storage:"oinkium:asset/context",nbt:"TargetRegistry.ID"},{text:" は存在しません"}]
+# 成功したならばそのまま登録処理開始
 
-# 継承情報処理
-    execute if data storage oinkium:asset/object ID if data storage oinkium:asset/object Extends[0] run function oinkium:asset_manager/object/extends/_
-    execute if data storage oinkium:asset/object ID run data modify storage oinkium:asset/object ID set from storage oinkium:context ID
+# ROMストレージ取得
+    execute store result score $OinkiumRomAddress Oinkium.Rom run data get storage oinkium:asset/context ID
+    function oinkium:rom/please
 
-# ROM呼び出し
-    execute if data storage oinkium:asset/object ID store result score $OinkiumRomAddress Oinkium.Rom run data get storage oinkium:asset/object ID
-    execute if data storage oinkium:asset/object ID run function oinkium:rom/please
+# 初期化
+    data remove storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4].Object.ID
+    data remove storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4].Object.Field
 
-# ROMにデータを入れる
-    execute if data storage oinkium:asset/object ID run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4].Object.ID set from storage oinkium:asset/object ID
-
-# リセット
-    data remove storage oinkium:context ID
-    data remove storage oinkium:asset/object ID
-    data remove storage oinkium:asset/object IsFinal
-    data remove storage oinkium:asset/object IsAbstract
-
-# 末尾削除
-    data remove storage oinkium:asset/object ObjectRegistries[-1]
-
-# 要素が無くなるまで再帰
-    execute if data storage oinkium:asset/object ObjectRegistries[0].ID run function oinkium:asset_manager/object/register/_
+# ROMにデータを突っ込む
+    data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4].Object.ID set from storage oinkium:asset/context ID
+    data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4].Object.Field set from storage oinkium:asset/object Field

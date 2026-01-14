@@ -2,6 +2,8 @@
 #
 # マクロを用いてレジストリのデータを取ってくる
 #
+# @input args ID: int
+#
 # @within function
 #   oinkium:asset_manager/object/register.m
 #   oinkium:asset_manager/object/extends/check

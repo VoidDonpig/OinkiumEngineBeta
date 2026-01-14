@@ -12,3 +12,6 @@
 
 # IsAbstract? (boolean)
     data modify storage oinkium:asset/object IsAbstract set value false
+
+# Field? (any)
+    data modify storage oinkium:asset/object Field.Value.0._ set value true

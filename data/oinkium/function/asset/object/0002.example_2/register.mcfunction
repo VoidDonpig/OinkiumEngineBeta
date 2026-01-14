@@ -4,6 +4,10 @@
 #
 # @within function oinkium:asset/object/_alias/2/register
 
+# Extends? (int array)
+    data modify storage oinkium:asset/object Extends append value 1
+    function oinkium:asset/object/extends
+
 # ID (int)
     data modify storage oinkium:asset/object ID set value 2
 
@@ -13,5 +17,5 @@
 # IsAbstract? (boolean)
     data modify storage oinkium:asset/object IsAbstract set value false
 
-# Extends? (Int Array)
-    data modify storage oinkium:asset/object Extends append value 1
+# Field? (any)
+    data modify storage oinkium:asset/object Field.Value.2._ set value true
