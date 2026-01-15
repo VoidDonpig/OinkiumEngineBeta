@@ -16,3 +16,4 @@
 
 # リセット
     scoreboard players reset $OinkiumRomAddress Oinkium.Rom
+    

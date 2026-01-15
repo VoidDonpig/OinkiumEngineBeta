@@ -15,6 +15,9 @@
 # Prefix
     data modify storage oinkium:global Prefix.Error set value "§r§c[Oinkium] ERROR>>§r "
 
+# エンティティストレージ用初期化処理
+    execute unless data storage oinkium:entity_storage _ run function oinkium:entity_storage/init
+
 # ROM用初期化処理
     execute unless data storage oinkium:rom _ run function oinkium:rom/init
 
