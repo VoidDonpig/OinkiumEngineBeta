@@ -15,6 +15,9 @@
 # @private
 #declare score_holder $OinkiumEntityStorageBase
 #declare score_holder $OinkiumEntityStorageTarget
+#declare score_holder $OinkiumEntityStorageX
+#declare score_holder $OinkiumEntityStoragePrevious
+#declare score_holder $OinkiumEntityStorageNext
 
 # ID配列を1つ巡回
     data modify storage oinkium:entity_storage ID append from storage oinkium:entity_storage ID[0]
