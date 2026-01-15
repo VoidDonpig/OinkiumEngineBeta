@@ -129,110 +129,110 @@
 
 # シフト1
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _ append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _ append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _ append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _ append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _ append from storage oinkium:global ThreeEmptyLists[]
     
 # チェック2 + シフト2
     execute unless data storage oinkium:rom _[-4][0] run data modify storage oinkium:rom _[-4] set from storage oinkium:rom Initial[0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック3 + シフト3
     execute unless data storage oinkium:rom _[-4][-4][0] run data modify storage oinkium:rom _[-4][-4] set from storage oinkium:rom Initial[0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック4 + シフト4
     execute unless data storage oinkium:rom _[-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4] set from storage oinkium:rom Initial[0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック5 + シフト5
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック6 + シフト6
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック7 + シフト7
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック8 + シフト8
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック9 + シフト9
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック10 + シフト10
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック11 + シフト11
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック12 + シフト12
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック13 + シフト13
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック14 + シフト14
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック15 + シフト15
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append value []
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyLists[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック16 + シフト16
     execute unless data storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:rom Initial[0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
     scoreboard players operation $OinkiumRomAddress Oinkium.Rom *= $4 Oinkium.Constant
     execute if score $OinkiumRomAddress Oinkium.Rom matches 1073741824.. run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append value {}
-    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom TwoEmptyMaps[]
-    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:rom ThreeEmptyMaps[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches ..-1073741825 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyMaps[]
+    execute if score $OinkiumRomAddress Oinkium.Rom matches -1073741824..-1 run data modify storage oinkium:rom _[-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyMaps[]

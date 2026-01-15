@@ -10,12 +10,6 @@
 # 初期データ
     data modify storage oinkium:rom Initial set value [[[[[[[[[[[[[[[[{},{},{},{}],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]]
 
-# シフト用データ
-    data modify storage oinkium:rom TwoEmptyLists set value [[],[]]
-    data modify storage oinkium:rom ThreeEmptyLists set value [[],[],[]]
-    data modify storage oinkium:rom TwoEmptyMaps set value [{},{}]
-    data modify storage oinkium:rom ThreeEmptyMaps set value [{},{},{}]
-
 # メインストレージ
     data modify storage oinkium:rom _ set from storage oinkium:rom Initial
 

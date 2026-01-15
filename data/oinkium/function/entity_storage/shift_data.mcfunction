@@ -39,54 +39,54 @@
 
 # シフト1
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _ append value []
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _ append from storage oinkium:entity_storage TwoEmptyLists[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _ append from storage oinkium:entity_storage ThreeEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _ append from storage oinkium:global TwoEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _ append from storage oinkium:global ThreeEmptyLists[]
     
 # チェック2 + シフト2
     execute unless data storage oinkium:entity_storage _[-4][0] run data modify storage oinkium:entity_storage _[-4] set from storage oinkium:entity_storage Initial[0]
     scoreboard players operation $ Oinkium.EntityStorageID *= $4 Oinkium.Constant
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _[-4] append value []
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4] append from storage oinkium:entity_storage TwoEmptyLists[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4] append from storage oinkium:entity_storage ThreeEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック3 + シフト3
     execute unless data storage oinkium:entity_storage _[-4][-4][0] run data modify storage oinkium:entity_storage _[-4][-4] set from storage oinkium:entity_storage Initial[0][0]
     scoreboard players operation $ Oinkium.EntityStorageID *= $4 Oinkium.Constant
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _[-4][-4] append value []
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4] append from storage oinkium:entity_storage TwoEmptyLists[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4] append from storage oinkium:entity_storage ThreeEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック4 + シフト4
     execute unless data storage oinkium:entity_storage _[-4][-4][-4][0] run data modify storage oinkium:entity_storage _[-4][-4][-4] set from storage oinkium:entity_storage Initial[0][0][0]
     scoreboard players operation $ Oinkium.EntityStorageID *= $4 Oinkium.Constant
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _[-4][-4][-4] append value []
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4] append from storage oinkium:entity_storage TwoEmptyLists[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4] append from storage oinkium:entity_storage ThreeEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック5 + シフト5
     execute unless data storage oinkium:entity_storage _[-4][-4][-4][-4][0] run data modify storage oinkium:entity_storage _[-4][-4][-4][-4] set from storage oinkium:entity_storage Initial[0][0][0][0]
     scoreboard players operation $ Oinkium.EntityStorageID *= $4 Oinkium.Constant
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _[-4][-4][-4][-4] append value []
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4] append from storage oinkium:entity_storage TwoEmptyLists[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4] append from storage oinkium:entity_storage ThreeEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック6 + シフト6
     execute unless data storage oinkium:entity_storage _[-4][-4][-4][-4][-4][0] run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4] set from storage oinkium:entity_storage Initial[0][0][0][0][0]
     scoreboard players operation $ Oinkium.EntityStorageID *= $4 Oinkium.Constant
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4] append value []
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4] append from storage oinkium:entity_storage TwoEmptyLists[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4] append from storage oinkium:entity_storage ThreeEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック7 + シフト7
     execute unless data storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4] set from storage oinkium:entity_storage Initial[0][0][0][0][0][0]
     scoreboard players operation $ Oinkium.EntityStorageID *= $4 Oinkium.Constant
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4] append value []
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4] append from storage oinkium:entity_storage TwoEmptyLists[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4] append from storage oinkium:entity_storage ThreeEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyLists[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyLists[]
 
 # チェック8 + シフト8
     execute unless data storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][-4] set from storage oinkium:entity_storage Initial[0][0][0][0][0][0][0]
     scoreboard players operation $ Oinkium.EntityStorageID *= $4 Oinkium.Constant
     execute if score $ Oinkium.EntityStorageID matches 1073741824.. run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][-4] append value {}
-    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:entity_storage TwoEmptyMaps[]
-    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:entity_storage ThreeEmptyMaps[]
+    execute if score $ Oinkium.EntityStorageID matches ..-1073741825 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global TwoEmptyMaps[]
+    execute if score $ Oinkium.EntityStorageID matches -1073741824..-1 run data modify storage oinkium:entity_storage _[-4][-4][-4][-4][-4][-4][-4] append from storage oinkium:global ThreeEmptyMaps[]

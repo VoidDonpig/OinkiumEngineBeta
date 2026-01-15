@@ -8,7 +8,7 @@
     scoreboard players operation $OinkiumRomDelta Oinkium.Rom = $OinkiumRomAddress Oinkium.Rom
     scoreboard players operation $OinkiumRomDelta Oinkium.Rom -= $OinkiumRomLastAddress Oinkium.Rom
 
-    execute if score $OinkiumRomDelta Oinkium.Rom matches -10..10 run return run function oinkium:rom/incremental/_
+    execute if score $OinkiumRomDelta Oinkium.Rom matches -63..63 run return run function oinkium:rom/incremental/_
 
 # ストレージシフト
     function oinkium:rom/shift_data
